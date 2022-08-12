@@ -11,6 +11,18 @@
 
 ## Running via Docker
 
-1) 
+You will need to instal Docker on your local machine before running the below commands.
+
+Build your Docker image:
+```bash
+docker build . -t simple-node-app
+```
+
+Run your Docker image:
+```bash
+docker run -p 49160:8080 -d simple-node-app
+```
+
+Visit http://localhost:49160/ to view the application.
 
 > Reference: https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
