@@ -5,7 +5,7 @@
 1) Make sure you have [Node](https://nodejs.org/en/) installed.
 2) Run `npm install`.
 3) Run `node server.js`.
-4) Visit http://localhost:80/ to view the application.
+4) Visit http://localhost:8080/ to view the application.
 
 > Reference: https://nodejs.org/en/docs/guides/getting-started-guide/
 
@@ -20,7 +20,7 @@ docker build . -t simple-node-app
 
 Run your Docker image:
 ```bash
-docker run -p 49160:80 -d simple-node-app
+docker run -p 49160:8080 -d simple-node-app
 ```
 
 Visit http://localhost:49160/ to view the application.
