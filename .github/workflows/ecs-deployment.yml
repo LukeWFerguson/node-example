@@ -31,6 +31,11 @@ jobs:
     environment: production
 
     steps:
+      - uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: LukeWFerguson
+    
       - name: Checkout
         uses: actions/checkout@v3
 
