@@ -25,6 +25,17 @@ env:
                                                # containerDefinitions section of your task definition
 
 jobs:
+  run-linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Run linters
+        uses: wearerequired/lint-action@v2
+        
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
@@ -36,7 +47,7 @@ jobs:
           secret: ${{ github.TOKEN }}
           approvers: LukeWFerguson
     
-      - name: Checkout
+      - name: Check out Git repository
         uses: actions/checkout@v3
 
       - name: Configure AWS credentials
