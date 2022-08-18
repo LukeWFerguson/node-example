@@ -15,5 +15,8 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-EXPOSE 8080
+# Setting the port.
+ENV PORT=80
+
+EXPOSE $PORT
 CMD [ "node", "server.js" ]
